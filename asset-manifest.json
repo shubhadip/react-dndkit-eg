@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-dndkit-eg/static/css/main.4a49a8a2.css",
+    "main.js": "/react-dndkit-eg/static/js/main.9796e41e.js",
+    "index.html": "/react-dndkit-eg/index.html",
+    "main.4a49a8a2.css.map": "/react-dndkit-eg/static/css/main.4a49a8a2.css.map",
+    "main.9796e41e.js.map": "/react-dndkit-eg/static/js/main.9796e41e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a49a8a2.css",
+    "static/js/main.9796e41e.js"
+  ]
+}
