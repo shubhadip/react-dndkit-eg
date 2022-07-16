@@ -1,0 +1,32 @@
+
+.rlist {
+    // height: calc(100vh - 140px);
+    // padding-bottom: 50px;
+    // overflow-y: scroll;
+};
+  
+.rsbatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.irow{
+    width: 150px;
+    height: 80px;
+    border-radius: 16px;
+    // background: white;
+    margin: 8px 0px;
+    position: relative;
+    cursor: pointer;
+    border: 3px solid #4836E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+
+.hrtag {
+    text-align: center;
+    width: 10px;
+    border-top: 2px solid #4836E7;
+    margin: 16px 0px;
+}

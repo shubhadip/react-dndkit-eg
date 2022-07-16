@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+:root {
+  --light-orange: #FEE8D3;
+  --light-pink: #FEE7E7;
+}
+
+.bgYellow {
+  background: #e6a501f0;
+}
+
+.bgOrange {
+  background: #de7a40eb;
+}
+
+.bgRed {
+  background: #d54e4ef4;
+}
+
+.bgBlue {
+  background: #4836e7ee;
+}
+
+.bgTeal {
+  background: #23c1b6eb;
+}
+
+.bgGreen {
+  background: linear-gradient(180deg, #9DD345 0%, rgba(43, 195, 113, 0.9375) 100%);
+}
+
+.bgGrey {
+  background: #646464;
+}
+
+.bgBlack {
+  background: #292929;
+}
