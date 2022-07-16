@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSortable} from '@dnd-kit/sortable';
-import {CSS} from '@dnd-kit/utilities';
+import { CSS } from '@dnd-kit/utilities';
 
 export function SortableItem(props) {
   const {
@@ -15,7 +15,7 @@ export function SortableItem(props) {
     transform: CSS.Transform.toString(transform),
     transition,
   };
-  console.log(props.handle)
+  
   if(props.handle) {
     return (<div ref={setNodeRef} style={style} {...attributes} className={'pos-relative'}>
       {
@@ -28,6 +28,7 @@ export function SortableItem(props) {
       {props.children}
     </div>)
   }
+  
   return (
     <div ref={setNodeRef} style={style} {...attributes}   {...listeners} className={'pos-relative'}>
       {props.children}

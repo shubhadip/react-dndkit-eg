@@ -51,9 +51,10 @@
 .gridItem {
   padding: 32px;
   border-radius: 32px;
-  width: 240px;
-  height: 240px;
+  width: 120px;
+  height: 120px;
   display: flex;
+  flex-direction: column;
   align-items:center;
   justify-content:center;
   cursor: pointer;
@@ -89,4 +90,7 @@
   font-weight: bold;
   font-size: 24px;
   padding: 16px;
+}
+.clickme {
+  font-size: 12px ;
 }

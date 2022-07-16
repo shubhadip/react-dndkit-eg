@@ -40,7 +40,11 @@ function GridSwap() {
   return (
     <div className="App">
        <div className={'gridcontainer'}>
-        <DndContext id={'grid-dnd'} onDragEnd={handleDragEnd} sensors={sensors} collisionDetection={closestCenter}>
+        <DndContext id={'grid-dnd'} 
+          onDragEnd={handleDragEnd} 
+          sensors={sensors}
+          collisionDetection={closestCenter}
+        >
             <SortableContext 
               strategy={rectSwappingStrategy}
               id={'grid-sort-context'}
@@ -52,7 +56,8 @@ function GridSwap() {
                 return (
                   <SortableItem key={value?.id} id={value?.id} >
                     <div className={[`bg${bgColor}`, `gridItem`].join(' ')} onClick={() =>handleGridClick(value)}>
-                      {value?.text}
+                      <p>{value?.text}</p>
+                      <p className='clickme'>click me</p>
                     </div>
                   </SortableItem>
                 )

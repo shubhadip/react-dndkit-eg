@@ -27,38 +27,40 @@ const HorizontalEg = () => {
     })
   );
 
-    return (<div className={styles.rlist}>
-        {
-            data.map((i, index) => {
-                return (
-                    <DndContext
-                    key={`dndContextR-${i.name || index}`}
-                    id={`dndContextR-${i.name || index}`}
-                    onDragEnd={(e) => handleDragEnd(e, i)}
-                    sensors={sensors}
-                    collisionDetection={closestCenter}
-                  >
-                    <SortableContext
-                      items={i.values.map((i) => i.id)}
-                      id={`sortableContextR-${i.name}`}
+    return (
+        <div className={styles.rlist}>
+            {
+                data.map((i, index) => {
+                    return (
+                        <DndContext
+                        key={`dndContextR-${i.name || index}`}
+                        id={`dndContextR-${i.name || index}`}
+                        onDragEnd={(e) => handleDragEnd(e, i)}
+                        sensors={sensors}
+                        collisionDetection={closestCenter}
                     >
-                    <div className={styles.rsbatch} key={i.name}>
-                        {
-                            i.values.map(j => {
-                                const bgColor = ColorArrayMapping[j?.id]
-                                return <SortableItem key={j.id} id={j.id}>
-                                    <div key={j.name} className={[styles.irow, `bg${bgColor}`].join(' ')}>{j.name}</div>
-                                </SortableItem>
-                            })
-                        }
-                        {detailsObject?.length - 1 !== index ? <hr className={styles.hrtag}></hr> : null}
-                    </div>
-                    </SortableContext>
-                </DndContext>
-                )
-            })
-        }
-    </div>)
+                        <SortableContext
+                        items={i.values.map((i) => i.id)}
+                        id={`sortableContextR-${i.name}`}
+                        >
+                        <div className={styles.rsbatch} key={i.name}>
+                            {
+                                i.values.map(j => {
+                                    const bgColor = ColorArrayMapping[j?.id]
+                                    return <SortableItem key={j.id} id={j.id}>
+                                        <div key={j.name} className={[styles.irow, `bg${bgColor}`].join(' ')}>{j.name}</div>
+                                    </SortableItem>
+                                })
+                            }
+                            {detailsObject?.length - 1 !== index ? <hr className={styles.hrtag}></hr> : null}
+                        </div>
+                        </SortableContext>
+                    </DndContext>
+                    )
+                })
+            }
+        </div>
+)
 
 function handleDragEnd(event, selecteddata) {
     const {active, over} = event;

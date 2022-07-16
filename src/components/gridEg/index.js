@@ -40,7 +40,12 @@ function App() {
   return (
     <div className="App">
        <div className={'gridcontainer'}>
-        <DndContext id={'grid-dnd-basic'} onDragEnd={handleDragEnd} sensors={sensors} collisionDetection={closestCenter}>
+        <DndContext 
+          id={'grid-dnd-basic'}
+          onDragEnd={handleDragEnd}
+          sensors={sensors}
+          collisionDetection={closestCenter}
+        >
             <SortableContext 
               id={'grid-sort-contextbasic'}
               items={items.map((i) => i?.id)}
@@ -50,7 +55,8 @@ function App() {
                 return (
                   <SortableItem handle={true} key={value?.id} id={value?.id} >
                     <div className={[`bg${bgColor}`, `gridItem`].join(' ')} onClick={() =>handleGridClick(value)}>
-                      {value?.text}
+                      <p>{value?.text}</p>
+                      <p className='clickme'>click me</p>
                     </div>
                   </SortableItem>
                 )

@@ -7,14 +7,18 @@ function App() {
   return (
     <div className={['App'].join(' ')}>
       <div className='appContainer'>
-        <HorizontalEg />
+        <div>
+          <p>Nested array of object</p>
+          <HorizontalEg />
+        </div>
+        
         <div className='grid-egs'>
           <div>
-            <p className='label-text'>Basic Grid</p>
+            <p className='label-text'>Basic Grid with Drag Handle</p>
             <GridEg />
           </div>
-          <div>
-            <p  className='label-text'>Grid Swap</p>
+          <div style={{marginTop: '48px'}}>
+            <p  className='label-text'>Grid Swap with Activation Constraint</p>
             <GridSwap />
           </div>
         </div>
